@@ -1,0 +1,15 @@
+<%= text_f f, :url, :class => "input-xlarge", :help_block => _("e.g. x.x.x.x") %>
+<%= text_f f, :user %>
+<%= password_f f, :password %>
+
+<% hypervisor = f.object.hypervisor.uuid rescue nil %>
+<% if hypervisor -%>
+    <%= f.hidden_field :uuid, :value => hypervisor %>
+<% end -%>
+
+<%= textarea_f f, :azure_pem, :label => _("Certificate"), :size => "col-md-8",
+  :placeholder => _("Paste your cert in here") %>
+
+<%= link_to_function _("Test Connection"), "testConnection(this)", :class => "btn + #{hypervisor.nil? ? "btn-default" : "btn-success"}", :'data-url' => test_connection_compute_resources_path %>
+
+<%= hidden_spinner('', :id => 'test_connection_indicator') %>

@@ -1,13 +1,13 @@
-module ForemanAzure
-  module HostsHelperExtensions
-    extend ActiveSupport::Concern
+# module ForemanAzure
+#   module HostsHelperExtensions
+#     extend ActiveSupport::Concern
 
-    included do
-      # execute callbacks
-    end
+#     included do
+#       # execute callbacks
+#     end
 
-    # create or overwrite instance methods...
-    def instance_method_name
-    end
-  end
-end
+#     # create or overwrite instance methods...
+#     def instance_method_name
+#     end
+#   end
+# end

@@ -1,3 +1,5 @@
-Rails.application.routes.draw do
-  get 'new_action', to: 'foreman_azure/hosts#new_action'
-end
+# Rails.application.routes.draw do
+#   namespace :foreman_azure do
+    
+#   end
+# end
